@@ -1,0 +1,177 @@
+/* Contact.css */
+.contact {
+    padding: 100px 20px;
+    background-color: var(--bg);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.contact.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação de entrada (da esquerda) */
+@keyframes contactSlideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    /* 🔥 isso é o segredo */
+    gap: 4px;
+}
+
+/* Título */
+.section-title-cont {
+    font-size: 2.0rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    color: var(--title);
+    text-align: center;
+}
+
+/* Container dos contatos */
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    flex-wrap: wrap;
+    perspective: 900px;
+}
+
+/* Item individual */
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    min-width: 180px;
+}
+
+/* Círculo do ícone */
+.contact-icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.9s ease, background 0.3s ease;
+}
+
+/* .contact-item:hover .contact-icon-container {
+    transform: translateY(-5px);
+    background: rgba(138, 99, 255, 0);
+} */
+
+/* Ícone */
+.contact-icon {
+    font-size: 2.0rem;
+    color: var(--primary-color);
+}
+
+/* Texto */
+.contact-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--title);
+    margin-top: 0.3rem;
+}
+
+.contact-value {
+    font-size: 1rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-value:hover {
+    color: #9f16b8;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+}
+
+.contact .contact-item {
+    opacity: 0;
+    transform: translateX(-40px);
+    will-change: transform, opacity;
+}
+
+.contact.visible .contact-item {
+    animation: contactSlideInLeft 1.2s ease both;
+}
+
+.contact-item:hover {
+   transform: translateZ(30px) scale(1.12);
+}
+
+.contact-item:hover .contact-icon-container,
+.contact-item:hover .contact-content {
+    transform: translateY(-6px);
+}
+
+.contact-icon-container,
+.contact-content {
+    transition: transform 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contacts-container {
+        gap: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-container {
+        gap: 2.5rem;
+    }
+
+    .contact-icon-container {
+        width: 75px;
+        height: 75px;
+    }
+
+    .contact-icon {
+        font-size: 2rem;
+    }
+}

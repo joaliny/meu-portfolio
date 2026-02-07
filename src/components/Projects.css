@@ -1,0 +1,439 @@
+/* Projects.css - VERSÃO OTIMIZADA PARA PERFORMANCE */
+.projects {
+    padding: 80px 20px;
+    background: var(--surface-2);
+    width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--title);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* GRID RESPONSIVO - OTIMIZADO */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    width: 100%;
+}
+
+/* CONTAINER DO CARD - OTIMIZADO */
+.project-card-container {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+}
+
+/* QUANDO O CARD ESTÁ EXPANDIDO */
+.project-card-container.hovered {
+    margin-bottom: 60px;
+    /* Reduzido e sem !important */
+    z-index: 20;
+}
+
+/* Card principal - OTIMIZADO */
+.project-card {
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    height: 280px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Mais suave */
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        /* Mais lento e suave */
+    /* Transição mais rápida */
+}
+
+/* Overlay escuro */
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        /* Mais lento */
+}
+
+/* Conteúdo centralizado */
+.project-overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        /* Mais lento */
+}
+
+.project-overlay-content h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    transition: all 0.4s ease; /* Transição para efeitos extras */
+}
+
+.project-techs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 0.4s ease;
+}
+
+.tech-icon {
+    font-size: 2.2rem;
+    color: #be0cdd;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        /* Efeito suave nos ícones */
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #81398E, #9333ea, #a855f7);
+    z-index: 3;
+    transition: all 0.4s ease;
+        /* Para efeitos na linha */
+}
+
+/* ===========================================
+   EFEITO HOVER - SIMPLIFICADO
+   =========================================== */
+
+/* Esconde texto e ícones no hover */
+.project-card-container:hover .project-overlay-content,
+.project-card-container.hovered .project-overlay-content {
+    opacity: 0;
+    transition-delay: 0.1s;
+        /* Pequeno delay para sincronizar */
+}
+
+/* Remove overlay escuro no hover */
+.project-card-container:hover .image-overlay,
+.project-card-container.hovered .image-overlay {
+    opacity: 0;
+    transition-delay: 0.05s;
+}
+
+/* Zoom suave na imagem */
+.project-card-container:hover .project-image img,
+.project-card-container.hovered .project-image img {
+    transform: scale(1.1);
+    /* Zoom mais sutil */
+}
+
+/* ===========================================
+   CONTEÚDO EXPANDIDO - OTIMIZADO
+   =========================================== */
+.card-expandable-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(20, 20, 35, 0.95);
+    /* REMOVIDO: backdrop-filter: blur(10px); - MUITO PESADO! */
+    border-radius: 0 0 10px 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-15px);
+    /* Movimento reduzido */
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        /* Mais suave */
+    /* Transições simplificadas */
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra mais leve */
+    pointer-events: none;
+}
+
+.project-card-container.hovered .card-expandable-content {
+    max-height: 65px;
+    /* Altura reduzida */
+    opacity: 1;
+    transform: translateY(0);
+    padding: 12px 20px;
+    /* Padding reduzido */
+    pointer-events: auto;
+}
+
+/* Botão Ver Mais - OTIMIZADO */
+.ver-mais-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Transições mais leves */
+    text-decoration: none;
+    min-width: 130px;
+    justify-content: center;
+}
+
+.ver-mais-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-icon {
+    font-size: 1rem;
+}
+
+/* ===========================================
+   ANIMAÇÕES DE ENTRADA - CORRIGIDAS
+   =========================================== */
+
+/* REMOVER ou MODIFICAR esta animação se estiver causando problemas */
+@keyframes projectSlideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* OPÇÃO 1: Desabilitar animações (recomendado se está travando) */
+/*
+.projects .project-card-container {
+    opacity: 1; 
+    animation: none;
+}
+*/
+
+/* OPÇÃO 2: Manter animação mas sem forwards (libera memória) */
+.projects .project-card-container {
+    opacity: 0;
+}
+
+.projects.visible .project-card-container {
+    animation: projectSlideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-fill-mode: forwards;
+}
+
+/* OPÇÃO 3: Delay mais curto e menos elementos */
+.projects.visible .project-card-container:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.projects.visible .project-card-container:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.projects.visible .project-card-container:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.projects.visible .project-card-container:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+/* ===========================================
+   RESPONSIVIDADE - OTIMIZADA
+   =========================================== */
+
+/* MOBILE (até 767px) */
+@media (max-width: 767px) {
+    .projects {
+        padding: 60px 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        gap: 20px;
+    }
+
+    .project-card {
+        height: 240px;
+    }
+
+    .project-overlay-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .tech-icon {
+        font-size: 1.6rem;
+    }
+
+    .project-card-container.hovered {
+        margin-bottom: 50px;
+    }
+
+    .card-expandable-content {
+        padding: 10px 15px;
+    }
+
+    .ver-mais-btn {
+        width: 100%;
+        max-width: 180px;
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    /* DESATIVAR ANIMAÇÕES EM MOBILE */
+    .project-card-container {
+        animation: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* TABLET (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .project-card {
+        height: 250px;
+    }
+
+    .project-card-container.hovered {
+        margin-bottom: 55px;
+    }
+}
+
+/* DESKTOP (1024px+) */
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .project-card {
+        height: 280px;
+    }
+
+    .project-card-container.hovered {
+        margin-bottom: 65px;
+    }
+}
+
+/* MOBILE PEQUENO */
+@media (max-width: 480px) {
+    .projects {
+        padding: 50px 12px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .projects-grid {
+        gap: 15px;
+    }
+
+    .project-card {
+        height: 220px;
+    }
+
+    .project-card-container.hovered {
+        margin-bottom: 45px;
+    }
+
+    .project-overlay-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .tech-icon {
+        font-size: 1.4rem;
+    }
+}
+
+/* ===========================================
+   SOLUÇÃO DE EMERGÊNCIA SE AINDA TRAVAR
+   =========================================== */
+
+/* Adicione esta classe ao body via JavaScript se necessário */
+.perf-mode * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* Ou adicione estas regras temporariamente para teste */
+/*
+* {
+    animation: none !important;
+    transition: none !important;
+}
+*/

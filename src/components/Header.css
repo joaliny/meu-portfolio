@@ -1,0 +1,286 @@
+/* ================= HEADER ================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    border-bottom: 1px solid #82378A;
+    z-index: 1002;
+}
+
+.header-content {
+    height: 70px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(10px, 3vw, 20px);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 12px;
+    align-items: center;
+}
+
+/* ================= LOGO ================= */
+.logo {
+    justify-self: center;
+    font-size: clamp(14px, 4vw, 24px);
+    font-weight: 600;
+    color: var(--title);
+    pointer-events: none;
+    white-space: nowrap;
+    max-width: 50vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger-btn {
+    width: 18px;
+    height: 20px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1003;
+}
+
+
+
+.hamburger-btn span {
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ===== X quando aberto ===== */
+.hamburger-btn.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ================= OVERLAY ================= */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--menu-bg);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ================= MENU ================= */
+.menu-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+}
+
+/* ===== TÍTULO ===== */
+.menu-title h2 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.menu-title span {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ===== ITENS ===== */
+.menu-items {
+    display: flex;
+        flex-direction: column;
+        gap: 24px;
+}
+
+.menu-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-muted);
+
+    /* 🔥 animação suave */
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-link:hover {
+    transform: scale(1.6);
+    /* zoom pra frente */
+    color: var(--primary-color);
+    /* destaque opcional */
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay);
+    /* TRANSPARÊNCIA */
+    backdrop-filter: blur(6px);
+    /* efeito premium */
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 1001;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= ANIMAÇÃO ================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .menu-link {
+        font-size: 28px;
+    }
+
+    .menu-title h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-link {
+        font-size: 22px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
+/* ================= TOGGLE ================= */
+.theme-toggle {
+    justify-self: end;
+    padding: 0;
+    border-radius: 999px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+}
+
+.theme-toggle-track {
+    --toggle-w: 55px;
+    --toggle-h: 25px;
+    --toggle-pad: 3px;
+    display: inline-flex;
+    align-items: center;
+    width: var(--toggle-w);
+    height: var(--toggle-h);
+    border-radius: 999px;
+    background: #ffffff;
+    padding: var(--toggle-pad);
+    transition: background 0.25s ease;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.theme-toggle-track.light {
+    background: #82378A;
+}
+
+.theme-toggle-track.dark {
+    background: #ffffff;
+}
+
+.theme-toggle-knob {
+    width: calc(var(--toggle-h) - (var(--toggle-pad) * 2));
+    height: calc(var(--toggle-h) - (var(--toggle-pad) * 2));
+    border-radius: 50%;
+    background: #0b0b0d;
+    /* border: 2px solid #ffffff; */
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+}
+
+.theme-toggle-track.dark .theme-toggle-knob {
+    transform: translateX(calc(var(--toggle-w) - var(--toggle-h)));
+}
+
+.theme-toggle:hover .theme-toggle-track {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes responsivos do header */
+@media (max-width: 768px) {
+    .header-content {
+        height: 64px;
+        column-gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        height: 58px;
+        column-gap: 8px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .hamburger-btn {
+        width: 16px;
+        height: 18px;
+    }
+
+    .theme-toggle-track {
+        --toggle-w: 44px;
+        --toggle-h: 20px;
+        --toggle-pad: 3px;
+    }
+}
+
+@media (max-width: 390px) {
+    .header-content {
+        column-gap: 6px;
+    }
+
+    .logo {
+        font-size: 14px;
+        max-width: 45vw;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 14px;
+    }
+}

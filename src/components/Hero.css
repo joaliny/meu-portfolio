@@ -1,0 +1,336 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image text";
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.hero-text {
+    grid-area: text;
+}
+
+/* =========================
+   TEXTO
+========================= */
+
+.hero-greeting {
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    /* Responsivo */
+    color: var(--title);
+    margin-bottom: 0.2rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    /* Responsivo */
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    line-height: 1;
+    /* Alterado de 0.9 para 1 */
+    display: flex;
+    align-items: flex-end;
+    color: var(--primary-color);
+    flex-wrap: wrap;
+    /* Permite quebra de linha */
+    gap: 0.3rem;
+}
+
+.title-name {
+    color: #82378A;
+    word-break: keep-all;
+    /* Evita quebra no nome */
+}
+
+.title-colon {
+    color: var(--primary-color);
+    font-size: clamp(2rem, 5vw, 3rem);
+    /* Responsivo */
+    margin-left: 0.3rem;
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    /* Responsivo */
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+/* =========================
+   IMAGEM
+========================= */
+
+.hero-image {
+    grid-area: image;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container da imagem */
+.image-placeholder {
+    width: 100%;
+    max-width: 350px;
+    /* Limite máximo */
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.image-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: 22px;
+    z-index: 1;
+}
+
+/* Foto */
+.image-square {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    max-height: 420px;
+    aspect-ratio: 350/420;
+    /* Mantém proporção */
+    object-fit: cover;
+    border-radius: 52px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Dots decorativos */
+.image-dots {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.image-dots .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Posições dos dots (ajustadas para %) */
+.dot:nth-child(1) {
+    top: 20%;
+    left: 20%;
+}
+
+.dot:nth-child(2) {
+    top: 20%;
+    left: 50%;
+}
+
+.dot:nth-child(3) {
+    top: 20%;
+    left: 80%;
+}
+
+.dot:nth-child(4) {
+    top: 50%;
+    left: 20%;
+}
+
+.dot:nth-child(5) {
+    top: 50%;
+    left: 50%;
+}
+
+.dot:nth-child(6) {
+    top: 50%;
+    left: 80%;
+}
+
+.dot:nth-child(7) {
+    top: 80%;
+    left: 20%;
+}
+
+.dot:nth-child(8) {
+    top: 80%;
+    left: 50%;
+}
+
+.dot:nth-child(9) {
+    top: 80%;
+    left: 80%;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    /* Permite quebra dos botões */
+}
+
+.btn-primary,
+.btn-outline {
+    padding: 8px 16px;
+    /* Aumentei horizontal padding */
+    border-radius: 50px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    /* Responsivo */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 150px;
+    /* Reduzido */
+    width: auto;
+    height: 37px;
+    border: none;
+    text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 1.5rem;
+    }
+
+    .image-placeholder {
+        max-width: 300px;
+    }
+
+    .image-square {
+        max-width: 300px;
+        max-height: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "text";
+        gap: 1rem;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .image-placeholder {
+        max-width: 260px;
+        margin: 0 auto;
+        /* Centraliza */
+        margin-top: 20px;
+    }
+
+    .image-square {
+        max-width: 260px;
+        max-height: 312px;
+        border-radius: 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero-content {
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .image-placeholder {
+        max-width: 220px;
+        margin-top: 10px;
+    }
+
+    .image-square {
+        max-width: 220px;
+        max-height: 264px;
+        border-radius: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .dot {
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/* Para telas muito pequenas (menos de 350px) */
+@media (max-width: 350px) {
+    .hero-title {
+        font-size: 1.4rem;
+    }
+
+    .title-colon {
+        font-size: 1.8rem;
+    }
+
+    .image-placeholder {
+        max-width: 180px;
+    }
+
+    .image-square {
+        max-width: 180px;
+        max-height: 216px;
+        border-radius: 24px;
+    }
+}
