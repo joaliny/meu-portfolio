@@ -111,7 +111,7 @@ function Hero() {
                         {nameDone && (
                             <Typewriter
                                 text="Desenvolvedora Back-end em Formação | PHP | Python | Laravel | Django | JavaScript"
-                                delay={50}
+                                delay={40}
                                 speed={10}
                             />
                         )}
