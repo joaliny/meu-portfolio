@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import './Hero.css';
-import joalinyImg from '../assets/icons/joaliny3.png';
+import joalinyImg from '../assets/icons/joaliny9.jpg';
 
 /* =========================
    COMPONENTE TYPEWRITER
