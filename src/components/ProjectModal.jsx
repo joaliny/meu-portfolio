@@ -16,13 +16,21 @@ function ProjectModal({ project, onClose }) {
 
                     {/* ESQUERDA */}
                     <div className="project-left">
-                        <video
-                            src={project.video}
-                            controls
-                            autoPlay
-                            muted
-                            loop
-                        />
+                        
+                        {project.video && (
+                            <iframe
+                                src={project.video}
+                                width="100%"
+                                height="320"
+                                allow="autoplay"
+                                allowFullScreen
+                                style={{
+                                    borderRadius: '12px',
+                                    border: 'none'
+                                }}
+                            />
+                        )}
+
 
                         <div className="project-buttons">
                             {project.github && (
