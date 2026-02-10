@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import './Hero.css';
-import joalinyImg from '../assets/icons/joaliny9.jpg';
 
 /* =========================
    COMPONENTE TYPEWRITER
@@ -74,9 +73,9 @@ function Hero() {
                 {/* IMAGEM */}
                 <div className="hero-image">
                     <div className="image-placeholder">
-                        <img
-                            src={joalinyImg}
-                            alt="Foto de Joaliny"
+                        <img 
+                            src="/assets/icons/joaliny9.jpg" 
+                            alt="Foto de Joaliny" 
                             className="image-square"
                         />
                     </div>
