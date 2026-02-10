@@ -6,7 +6,7 @@ import joalinyImg from '../assets/icons/joaliny3.png';
 /* =========================
    COMPONENTE TYPEWRITER
 ========================= */
-function Typewriter({ text, speed = 60, delay = 0, onDone }) {
+function Typewriter({ text, speed = 100, delay = 60, onDone }) {
     const [displayText, setDisplayText] = useState("");
     const [index, setIndex] = useState(0);
 
@@ -41,6 +41,8 @@ function Typewriter({ text, speed = 60, delay = 0, onDone }) {
 ========================= */
 function Hero() {
     const heroRef = useRef();
+    const [greetingDone, setGreetingDone] = useState(false);
+    const [nameDone, setNameDone] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -82,17 +84,37 @@ function Hero() {
 
                 {/* TEXTO */}
                 <div className="hero-text">
-                    <p className="hero-greeting">Olá, me chamo</p>
+                    <p className="hero-greeting">
+                        <Typewriter
+                            text="Olá, me chamo"
+                            delay={100}
+                            speed={30}
+                            onDone={() => setGreetingDone(true)}
+                        />
+                    </p>
 
                     <h1 className="hero-title">
                         <span className="title-name">
-                            <Typewriter text="Joaliny Furtado" />
+                            {greetingDone && (
+                                <Typewriter
+                                    text="Joaliny Furtado"
+                                    delay={50}
+                                    speed={10}
+                                    onDone={() => setNameDone(true)}
+                                />
+                            )}
                         </span>
                         <span className="title-colon">:)</span>
                     </h1>
 
                     <span className="role-line">
-                        Desenvolvedora Back-end em Formação | PHP | Python | Laravel | Django | JavaScript
+                        {nameDone && (
+                            <Typewriter
+                                text="Desenvolvedora Back-end em Formação | PHP | Python | Laravel | Django | JavaScript"
+                                delay={50}
+                                speed={10}
+                            />
+                        )}
                     </span>
 
                     <div className="hero-buttons">
