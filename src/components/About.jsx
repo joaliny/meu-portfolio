@@ -1,40 +1,34 @@
 import { useState, useRef, useEffect } from 'react';
 import './About.css';
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { BsFiletypeJs } from "react-icons/bs";
-import { FaReact } from "react-icons/fa";
-import { FaPhp } from "react-icons/fa";
-import { FaPython } from "react-icons/fa";
-import { FaLaravel } from "react-icons/fa";
-import { FaFigma } from "react-icons/fa";
+import {
+    FaHtml5,
+    FaCss3Alt,
+    FaReact,
+    FaPhp,
+    FaPython,
+    FaLaravel,
+    FaFigma
+} from "react-icons/fa";
+import { SiFlask, SiDjango } from "react-icons/si";
+import { BsFiletypeJs } from "react-icons/bs";  // ✅ APENAS UMA VEZ!
+
 
 // ✅ URLS DIRETAS DAS IMAGENS (sem import)
-const flaskIconUrl = "/assets/icons/1.png";
-const djangoIconUrl = "/assets/icons/2.png";
+// const flaskIconUrl = "/assets/icons/1.png";
+// const djangoIconUrl = "/assets/icons/2.png";
 
 // Lista de habilidades
 const skillsData = [
-    { name: 'HTML5', icon: <FaHtml5 />, color: '#81398e', isEmoji: false },
-    { name: 'CSS3', icon: <FaCss3Alt />, color: '#81398e', isEmoji: false },
-    { name: 'JavaScript', icon: <BsFiletypeJs />, color: '#81398e', isEmoji: false },
-    { name: 'React', icon: <FaReact />, color: '#81398e', isEmoji: false },
-    { name: 'PHP', icon: <FaPhp />, color: '#81398e', isEmoji: false },
-    { name: 'Python', icon: <FaPython />, color: '#81398e', isEmoji: false },
-    { name: 'Laravel', icon: <FaLaravel />, color: '#81398e', isEmoji: false },
-    {
-        name: 'Flask',
-        icon: <img src={flaskIconUrl} alt="Flask" className="skill-icon-img" />,
-        color: '#81398e',
-        isEmoji: false
-    },
-    {
-        name: 'Django',
-        icon: <img src={djangoIconUrl} alt="Django" className="skill-icon-img-django" />,
-        color: '#81398e',
-        isEmoji: false
-    },
-    { name: "Figma", icon: <FaFigma />, color: "#81398e", isEmoji: false },
+    { name: 'HTML5', icon: <FaHtml5 />, color: '#81398e' },
+    { name: 'CSS3', icon: <FaCss3Alt />, color: '#81398e' },
+    { name: 'JavaScript', icon: <BsFiletypeJs />, color: '#81398e' }, // ✅ OK
+    { name: 'React', icon: <FaReact />, color: '#81398e' },
+    { name: 'PHP', icon: <FaPhp />, color: '#81398e' },
+    { name: 'Python', icon: <FaPython />, color: '#81398e' },
+    { name: 'Laravel', icon: <FaLaravel />, color: '#81398e' },
+    { name: 'Flask', icon: <SiFlask />, color: '#81398e' },
+    { name: 'Django', icon: <SiDjango />, color: '#81398e' },
+    { name: "Figma", icon: <FaFigma />, color: "#81398e" },
 ];
 
 function About() {

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { FiDownload, FiMail } from 'react-icons/fi';
 import './Hero.css';
+import fotoJoaliny from '../assets/icons/joaliny9.jpg'
 
 
 /* =========================
@@ -74,11 +75,7 @@ function Hero() {
                 {/* IMAGEM */}
                 <div className="hero-image">
                     <div className="image-placeholder">
-                        <img
-                            src="/assets/icons/joaliny9.jpg"
-                            alt="Foto de Joaliny"
-                            className="image-square"
-                        />
+                        <img src={fotoJoaliny} alt="Foto de Joaliny" className="image-square" />
                     </div>
                 </div>
 
