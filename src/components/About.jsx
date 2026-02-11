@@ -7,24 +7,34 @@ import { FaReact } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaLaravel } from "react-icons/fa";
-import flaskIcon from "../assets/icons/1.png";
-import DjangoIcon from "../assets/icons/2.png";
 import { FaFigma } from "react-icons/fa";
 
+// ✅ URLS DIRETAS DAS IMAGENS (sem import)
+const flaskIconUrl = "/assets/icons/1.png";
+const djangoIconUrl = "/assets/icons/2.png";
 
-// Lista de habilidades IGUAL À IMAGEM - apenas nome e ícone
+// Lista de habilidades
 const skillsData = [
-    {name: 'HTML5',icon: <FaHtml5 />,color: '#81398e', isEmoji: false},
-    {name: 'CSS3',icon: <FaCss3Alt />,color: '#81398e',isEmoji: false},
-    {name: 'JavaScript',icon: <BsFiletypeJs />,color: '#81398e',isEmoji: false},
-    {name: 'React', icon: <FaReact />, color: '#81398e',isEmoji: false},
-    {name: 'PHP', icon: <FaPhp />, color: '#81398e', isEmoji: false },
-    {name: 'Python', icon: <FaPython />, color: '#81398e', isEmoji: false },
-    {name: 'Laravel', icon: <FaLaravel />, color: '#81398e', isEmoji: false },
-    {name: 'Flask',icon: <img src={flaskIcon}alt="Flask" className="skill-icon-img"/>,color: '#81398e',isEmoji: false},
-    {name: 'Django',icon: <img src={DjangoIcon} alt="Django" className="skill-icon-img-django" />, color: '#81398e', isEmoji: false},
-    {name: "Figma",icon: <FaFigma />,color: "#81398e",isEmoji: false,},
-    
+    { name: 'HTML5', icon: <FaHtml5 />, color: '#81398e', isEmoji: false },
+    { name: 'CSS3', icon: <FaCss3Alt />, color: '#81398e', isEmoji: false },
+    { name: 'JavaScript', icon: <BsFiletypeJs />, color: '#81398e', isEmoji: false },
+    { name: 'React', icon: <FaReact />, color: '#81398e', isEmoji: false },
+    { name: 'PHP', icon: <FaPhp />, color: '#81398e', isEmoji: false },
+    { name: 'Python', icon: <FaPython />, color: '#81398e', isEmoji: false },
+    { name: 'Laravel', icon: <FaLaravel />, color: '#81398e', isEmoji: false },
+    {
+        name: 'Flask',
+        icon: <img src={flaskIconUrl} alt="Flask" className="skill-icon-img" />,
+        color: '#81398e',
+        isEmoji: false
+    },
+    {
+        name: 'Django',
+        icon: <img src={djangoIconUrl} alt="Django" className="skill-icon-img-django" />,
+        color: '#81398e',
+        isEmoji: false
+    },
+    { name: "Figma", icon: <FaFigma />, color: "#81398e", isEmoji: false },
 ];
 
 function About() {
