@@ -46,7 +46,7 @@ function Projects() {
             subtitle: 'Sistema Web de Agendamento de Salas com Controle de Reservas 📅',
             techs: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Laravel'],
             // ✅ URL direta com BASE_URL
-            image: `${baseUrl}assets/icons/foto_agendai.png`,
+            image: `/assets/icons/foto_agendai.png`,
             video: 'https://drive.google.com/file/d/1J5Kcexqk9GUiDTyJGCA6pfDV9HN_mtXF/preview',
             description: `O objetivo do projeto foi desenvolver habilidades técnicas e organizacionais por meio da criação do Agendai, um sistema web de agendamento de salas. A aplicação foi desenvolvida em PHP, utilizando o framework Laravel, com MySQL como banco de dados, permitindo o controle de reservas, a visualização de horários disponíveis e o gerenciamento de salas de forma prática e intuitiva.
 
@@ -60,7 +60,7 @@ Foram aplicados conceitos como autenticação de usuários, separação de perfi
             subtitle: 'Plataforma de adoção responsável de animais 🐶🐱',
             techs: ['Python', 'Flask', 'MySQL', 'HTML', 'CSS', 'JS'],
             // ✅ URL direta com BASE_URL
-            image: `${baseUrl}assets/icons/adote-me.png`,
+            image: `/assets/icons/adote-me.png`,
             video: 'https://drive.google.com/file/d/1ygPJoBg2bqv1sHF8roW-xBGhLEkDWJZU/preview',
             description: `O projeto Adote-me foi desenvolvido com o propósito de incentivar a adoção responsável de animais, oferecendo uma plataforma digital que aproxima pessoas interessadas em adoção de animais que precisam de um novo lar. O sistema possibilita a visualização dos animais disponíveis, com informações claras e organizadas, tornando o processo de adoção mais acessível e consciente.
 
@@ -80,7 +80,7 @@ A aplicação foi desenvolvida utilizando Python e o framework Flask, com MySQL 
             subtitle: 'Site institucional para venda de gramas naturais 🌿',
             techs: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript'],
             // ✅ URL direta com BASE_URL
-            image: `${baseUrl}assets/icons/sitegrama.png`,
+            image: `/assets/icons/sitegrama.png`,
             video: 'https://drive.google.com/file/d/1DHxZYen8CbCsMRtctRW3jg8EMIZDXp_c/preview',
             description: `O projeto JP Bothanica foi desenvolvido como um site institucional voltado à divulgação e comercialização de gramas naturais, como Esmeralda, São Carlos, Bermuda e Batatais. A plataforma apresenta os produtos de forma visual e organizada, destacando preços, características e diferenciais, além de facilitar o contato direto com clientes por meio do WhatsApp.
 
@@ -94,7 +94,7 @@ A aplicação conta com seções estratégicas como carrossel interativo, aprese
             subtitle: 'Blog informativo sobre as enchentes no RS 🌧️',
             techs: ['HTML', 'CSS', 'JavaScript'],
             // ✅ URL direta com BASE_URL
-            image: `${baseUrl}assets/icons/blogRS.png`,
+            image: `/assets/icons/blogRS.png`,
             video: 'https://drive.google.com/file/d/17LtKFpekCsMiKMZMzeHgBVOCZBrjCELf/preview',
             description: `O projeto SoS Rio Grande do Sul foi desenvolvido com o objetivo de reunir e divulgar informações relevantes sobre as enchentes que atingiram o estado do Rio Grande do Sul. A plataforma centraliza notícias, vídeos e atualizações sobre a situação das regiões afetadas, além de conteúdos voltados à conscientização e ao apoio às vítimas.
 

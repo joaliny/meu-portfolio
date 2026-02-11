@@ -75,7 +75,7 @@ function Hero() {
                 <div className="hero-image">
                     <div className="image-placeholder">
                         <img
-                            src="./assets/icons/joaliny9.jpg"
+                            src="/assets/icons/joaliny9.jpg"
                             alt="Foto de Joaliny"
                             className="image-square"
                         />

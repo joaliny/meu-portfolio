@@ -28,3 +28,9 @@ dist-ssr
 public/videos/*.mp4
 public/videos/*.mov
 public/videos/*.avi
+
+
+# ✅ PERMITE AS IMAGENS - ADICIONE ISTO!
+!public/assets/icons/
+!public/assets/icons/*.png
+!public/assets/icons/*.jpg
