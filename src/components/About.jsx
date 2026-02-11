@@ -7,8 +7,8 @@ import { FaReact } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaLaravel } from "react-icons/fa";
-import flaskIcon from "../assets/icons/1.png";
-import DjangoIcon from "../assets/icons/2.png";
+import flaskIcon from "/assets/icons/1.png";
+import DjangoIcon from "/assets/icons/2.png";
 import { FaFigma } from "react-icons/fa";
 
 
