@@ -75,7 +75,7 @@ function Hero() {
                 {/* IMAGEM */}
                 <div className="hero-image">
                     <div className="image-placeholder">
-                        <img src={fotoJoaliny} alt="Foto de Joaliny" className="image-square" />
+                       <img src={fotoJoaliny} alt="Foto de Joaliny" className="image-square" />
                     </div>
                 </div>
 
@@ -115,10 +115,17 @@ function Hero() {
                     </span>
 
                     <div className="hero-buttons">
-                        <button className="btn-primary">
+                        <a
+                            href={`${import.meta.env.BASE_URL}curriculojoalinyatualizado2026.pdf`}
+                            download
+                            className="btn-primary"
+                        >
                             <FiDownload />
                             Download CV
-                        </button>
+                        </a>
+
+
+
 
                         <button
                             className="btn-outline"

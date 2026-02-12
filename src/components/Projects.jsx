@@ -6,6 +6,7 @@ import fotoAgendai from '../assets/icons/foto_agendai.png'
 import adoteMe from '../assets/icons/adote-me.png'
 import siteGrama from '../assets/icons/sitegrama.png'
 import blogRS from '../assets/icons/blogRS.png'
+import portfolioImg from '../assets/icons/portfolio.png'
 
 import {
     FaHtml5,
@@ -22,6 +23,8 @@ import {
     SiGoogle,
 } from 'react-icons/si';
 
+import { SiReact } from 'react-icons/si';
+
 export const techIcons = {
     HTML: <FaHtml5 />,
     CSS: <FaCss3Alt />,
@@ -32,6 +35,7 @@ export const techIcons = {
     Python: <FaPython />,
     Flask: <SiFlask />,
     MySQL: <SiMysql />,
+    React: <SiReact />,
     'Google Gemini AI': <SiGoogle />,
 };
 
@@ -74,10 +78,21 @@ A aplicação foi desenvolvida utilizando Python e o framework Flask, com MySQL 
         },
         {
             id: 3,
-            title: 'Task Manager',
-            techs: ['JS', 'HTML', 'CSS'],
-            image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&auto=format&fit=crop'
+            title: 'Portfólio',
+            subtitle: 'Portfólio profissional para apresentação de projetos e habilidades 💼✨',
+            techs: ['React', 'JavaScript', 'HTML', 'CSS'],
+            image: portfolioImg, // sua imagem do projeto
+            video: 'https://drive.google.com/file/d/13SlN_3hGsT9Kf1AXQRwVLmyLdxJ3t7t8/preview', 
+            description: `Este portfólio foi desenvolvido com o propósito de consolidar e apresentar minha evolução acadêmica e prática na área.
+
+A aplicação foi construída com React, JavaScript, HTML e CSS, priorizando arquitetura baseada em componentes, organização estruturada do código e uma interface moderna e responsiva. O projeto reflete minha preocupação com performance, usabilidade e clareza visual.
+
+O site está dividido em seções estratégicas que evidenciam meu perfil profissional, habilidades técnicas, projetos desenvolvidos e canais de contato, facilitando a navegação e a compreensão do meu trabalho.
+`,
+            date: 'Fevereiro de 2026',
+            github: 'https://github.com/joaliny/meu-portfolio'
         },
+
         {
             id: 4,
             title: 'JP Bothanica',
