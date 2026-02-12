@@ -85,7 +85,7 @@ Fontes utilizadas: Inter e Poppins (via Google Fonts)
 
 E-mail: joalinyfurtado87@gmail.com
 
-GitHub: github.com/joaliny
+GitHub: https://github.com/joaliny
 
 LinkedIn: https://www.linkedin.com/in/joaliny-oliveira-furtado-3a82b91b8/
 
