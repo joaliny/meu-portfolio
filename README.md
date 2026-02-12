@@ -1,20 +1,98 @@
-<<<<<<< HEAD
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Joaliny Furtado - Portfólio
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Portfólio pessoal desenvolvido para apresentar meus projetos e habilidades como desenvolvedora back-end em formação.
 
-## React Compiler
+🔗 **Acesse online:** [joaliny.github.io/meu-portfolio](https://joaliny.github.io/meu-portfolio/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ **Sobre o Projeto**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# meu-portfolio
->>>>>>> 67ef3f38461bcfd33d18c55d1c97e4448283bda4
+Este portfólio foi criado para reunir e apresentar meus principais projetos, minhas habilidades técnicas e um pouco sobre minha trajetória na tecnologia. O design é moderno, responsivo e focado em proporcionar uma experiência agradável para recrutadores e visitantes.
+
+### 🎯 **Objetivos**
+- Apresentar meus projetos de forma clara e visual
+- Demonstrar minhas habilidades com React e Vite
+- Ter um site rápido, acessível e responsivo
+- Facilitar o contato para oportunidades profissionais
+
+---
+
+## 🛠️ **Tecnologias Utilizadas**
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| **React 19** | Biblioteca principal para construção da interface |
+| **Vite** | Ferramenta de build rápida e moderna |
+| **React Icons** | Ícones vetoriais (incluindo Simple Icons) |
+| **CSS3** | Estilização, animações e design responsivo |
+| **GitHub Pages** | Hospedagem gratuita do site |
+| **EmailJS** | Integração para formulário de contato |
+
+---
+
+## 📂 **Estrutura do Projeto**
+
+
+---
+
+## 📸 **Funcionalidades**
+
+✅ **Typewriter Effect** — Texto animado com efeito de máquina de escrever  
+✅ **Cards Interativos** — Projetos com hover e modal expansível  
+✅ **Design Responsivo** — Adaptado para mobile, tablet e desktop  
+✅ **Ícones Vetoriais** — React Icons + Simple Icons (Flask, Django, etc.)  
+✅ **Animações suaves** — Scroll reveal e transições CSS  
+✅ **Download CV** — Botão para baixar currículo em PDF  
+✅ **Contato direto** — Botão que abre cliente de e-mail  
+
+---
+
+## 🚀 **Projetos em Destaque**
+
+| Projeto | Tecnologias | Link |
+|---------|-------------|------|
+| **Agendaí** | PHP, Laravel, MySQL, JS | [Repositório](https://github.com/joaliny/ReservaSalas) |
+| **Adote-me** | Python, Flask, MySQL | [Repositório](https://github.com/joaliny/adote-me) |
+| **JP Bothanica** | Python, Django | [Repositório](https://github.com/joaliny/grama_store) |
+| **SoS Rio Grande do Sul** | HTML, CSS, JS | [Repositório](https://github.com/joaliny/sos-rio-grande-do-sul) |
+
+
+
+
+
+## 🎨 **Personalização**
+Cores principais:
+
+Roxo: #81398e (ícones e detalhes)
+
+Branco: #ffffff (fundo)
+
+Cinza: #f5f5f5 (seções alternadas)
+
+Fontes utilizadas: Inter e Poppins (via Google Fonts)
+
+
+
+## 📧 **Contato**
+
+E-mail: joalinyfurtado87@gmail.com
+
+GitHub: github.com/joaliny
+
+LinkedIn: https://www.linkedin.com/in/joaliny-oliveira-furtado-3a82b91b8/
+
+
+Desenvolvido com 💜 por Joaliny Furtado
+
+
+
+
+
